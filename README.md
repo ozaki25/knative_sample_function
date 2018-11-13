@@ -1,6 +1,8 @@
 # knative_sample_function
 
-## 手順
+## Get started
+
+### Knative
 
 ```
 brew install watch
@@ -24,3 +26,30 @@ riff service delete square
 ```
 
 https://projectriff.io/docs/getting-started/docker-for-mac/
+
+### Client
+
+```
+git clone https://github.com/ozaki25/knative_sample_function.git
+cd knative_sample_function
+yarn
+# or
+npm i
+```
+
+- start proxy server
+
+```
+node server.js
+```
+
+- open client
+
+```
+# for example
+serve .
+open http://localhost:5000/
+# or
+http-server .
+open http://localhost:8080/
+``
