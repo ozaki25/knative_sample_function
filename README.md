@@ -18,3 +18,9 @@ riff function create node fighters \
   --wait
 riff service invoke fighters --text -- -w '\n' -d 9
 ```
+
+```
+riff service delete square
+```
+
+https://projectriff.io/docs/getting-started/docker-for-mac/
