@@ -81,7 +81,7 @@ const players = {
 };
 
 const main = uniformNumber => {
-  const result = players[uniformNumber] || `の選手はいません`;
+  const result = players[uniformNumber] || `該当なし`;
   console.log(result);
   return result;
 };
