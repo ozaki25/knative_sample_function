@@ -11,10 +11,10 @@
 
   async function search() {
     const value = input.value;
-    const res = await fetch('http://fighters.default.example.com:32380/', {
+    const res = await fetch('http://localhost:32380/', {
       method: 'POST',
       headers: {
-        Hosts: 'fighters.default.example.com',
+        Hosts: 'fighters4.default.example.com',
         'Content-Type': 'text/plain',
       },
       body: value,
