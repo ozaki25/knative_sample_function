@@ -1,0 +1,25 @@
+<h3>ファイターズ背番号早見アプリ</h3>
+<p>背番号<input id="uniform-number" name="uniform-number" />番</p>
+<button id="submit">検索</button>
+<p id="result"></p>
+<script>
+  const input = document.getElementById('uniform-number');
+  const button = document.getElementById('submit');
+  const result = document.getElementById('result');
+
+  button.addEventListener('click', search);
+
+  async function search() {
+    const value = input.value;
+    const res = await fetch('http://fighters.default.example.com:32380/', {
+      method: 'POST',
+      headers: {
+        Hosts: 'fighters.default.example.com',
+        'Content-Type': 'text/plain',
+      },
+      body: value,
+    });
+    const result = await res.json();
+    result.innerText = result;
+  }
+</script>
