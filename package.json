@@ -3,9 +3,5 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "ozaki25",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.4",
-    "node-fetch": "^2.3.0"
-  }
+  "license": "MIT"
 }
