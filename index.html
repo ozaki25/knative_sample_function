@@ -11,15 +11,16 @@
 
   async function search() {
     const value = input.value;
-    const res = await fetch('http://localhost:32380/', {
+    const res = await fetch('http://localhost:8888/', {
       method: 'POST',
-      headers: {
-        Hosts: 'fighters4.default.example.com',
-        'Content-Type': 'text/plain',
-      },
-      body: value,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ value }),
     });
-    const result = await res.json();
-    result.innerText = result;
+    const resText = await res.text();
+    const text = document.createTextNode(`背番号 ${value} ${resText}`);
+    const p = document.createElement('p');
+    p.appendChild(text);
+    result.appendChild(p);
+    input.value = '';
   }
 </script>
